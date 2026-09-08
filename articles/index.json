@@ -1,5 +1,23 @@
 [
   {
+    "slug": "AgentHarness：会话管理（一）：会话隔离",
+    "source": "articles/AgentHarness：会话管理（一）：会话隔离.md",
+    "title": "Agent Harness：会话管理（一）：会话隔离",
+    "date": "2026-09-07",
+    "createdAt": "2026-09-07 09:21",
+    "updatedAt": "2026-09-08 16:31",
+    "tags": [
+      "Agent开发",
+      "后端"
+    ],
+    "translations": {
+      "en": {
+        "title": "Agent Harness Session Management (Part 1): Session Isolation",
+        "source": "articles/en/agent-harness-session-management-1-session-isolation.md"
+      }
+    }
+  },
+  {
     "slug": "2026.8.27 字节 Agent 一面手撕解析",
     "source": "articles/0827字节Agent一面手撕解析.md",
     "title": "字节 Agent 开发一面手撕解析",

@@ -89,6 +89,8 @@ h2 { margin-bottom: 0; font-size: clamp(27px, 3vw, 38px); letter-spacing: -.045e
 .article-content pre { position: relative; overflow-x: auto; padding: 18px 20px; border-radius: 10px; color: #e8ece5; background: #2c312d; font-family: Consolas, "Courier New", monospace; font-size: 13px; line-height: 1.65; }
 .article-content code { padding: .15em .35em; border-radius: 4px; color: #596453; background: #edf0e9; font-family: Consolas, "Courier New", monospace; font-size: .9em; }
 .article-content pre code { padding: 0; color: inherit; background: transparent; }
+.article-content .mermaid { margin: 1.5em 0; overflow-x: auto; text-align: center; }
+.article-content .mermaid svg { max-width: 100%; height: auto; }
 .article-content pre .token.comment, .article-content pre .token.prolog, .article-content pre .token.doctype, .article-content pre .token.cdata { color: #87958b; }
 .article-content pre .token.keyword, .article-content pre .token.selector, .article-content pre .token.atrule { color: #c9a7f2; }
 .article-content pre .token.string, .article-content pre .token.attr-value { color: #d6c58b; }

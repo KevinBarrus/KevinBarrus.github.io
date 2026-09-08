@@ -184,6 +184,21 @@ function renderMath() {
   });
 }
 
+async function renderMermaid() {
+  if (!window.mermaid) return;
+  const diagrams = Array.from(contentElement.querySelectorAll("pre > code.language-mermaid"));
+  if (!diagrams.length) return;
+  const nodes = diagrams.map((code) => {
+    const node = document.createElement("div");
+    node.className = "mermaid";
+    node.textContent = code.textContent;
+    code.parentElement.replaceWith(node);
+    return node;
+  });
+  window.mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  await window.mermaid.run({ nodes });
+}
+
 function normalizeCodeLanguages() {
   contentElement.querySelectorAll('code[class*="language-"]').forEach((code) => {
     const match = code.className.match(/\blanguage-([^\s]+)/);
@@ -218,7 +233,7 @@ if (!slug) {
     }
     const sourcePath = siteLanguage === "en" ? translation.source : item.source;
     return fetchResource(`./${sourcePath}`).then((response) => response.text()).then((source) => ({ item, source, sourcePath, translation }));
-  }).then((payload) => {
+  }).then(async (payload) => {
     if (!payload) return;
     const { item, source, sourcePath, translation } = payload;
     const parsed = parseFrontmatter(source);
@@ -245,6 +260,7 @@ if (!slug) {
     resolveArticleImagePaths(sourcePath);
     removeDuplicateTitle(title);
     normalizeCodeLanguages();
+    await renderMermaid();
     if (window.Prism) Prism.highlightAllUnder(contentElement);
     renderMath();
     addHeadingIdsAndToc();

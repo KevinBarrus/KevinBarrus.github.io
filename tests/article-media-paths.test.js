@@ -8,6 +8,12 @@ const images = [
   { src: "https://example.com/image.png" },
 ];
 const codeElement = { className: "language-C++" };
+let mermaidElement;
+const mermaidCode = {
+  className: "language-mermaid",
+  textContent: "flowchart TD\nA --> B",
+  parentElement: { replaceWith: (element) => { mermaidElement = element; } },
+};
 function element() {
   return { append() {}, replaceChildren() {}, querySelector: () => null, querySelectorAll: () => [], addEventListener() {}, dataset: {} };
 }
@@ -15,7 +21,8 @@ const content = {
   append() {},
   querySelector: () => null,
   querySelectorAll(selector) {
-    if (selector === 'code[class*="language-"]') return [codeElement];
+    if (selector === 'code[class*="language-"]') return [codeElement, mermaidCode];
+    if (selector === "pre > code.language-mermaid") return [mermaidCode];
     if (selector === "img[src]") {
       return images.map((image) => ({
         getAttribute: () => image.src,
@@ -38,6 +45,8 @@ const elements = {
   ".language-link": element(),
 };
 let requests = 0;
+let mermaidConfig;
+let mermaidNodes;
 const context = vm.createContext({
   URL,
   URLSearchParams,
@@ -54,6 +63,10 @@ const context = vm.createContext({
   window: {
     location: { search: "?slug=demo", protocol: "http:", href: "http://site.local/article.html?slug=demo" },
     marked: { parse: () => "<img>" },
+    mermaid: {
+      initialize: (config) => { mermaidConfig = config; },
+      run: ({ nodes }) => { mermaidNodes = nodes; },
+    },
     addEventListener() {},
   },
   fetch: () => {
@@ -72,6 +85,12 @@ const context = vm.createContext({
   assert.strictEqual(images[1].src, "./assets/example.png?size=2#preview");
   assert.strictEqual(images[2].src, "https://example.com/image.png");
   assert.strictEqual(codeElement.className, "language-cpp");
+  assert.strictEqual(mermaidElement.className, "mermaid");
+  assert.strictEqual(mermaidElement.textContent, "flowchart TD\nA --> B");
+  assert.strictEqual(mermaidConfig.startOnLoad, false);
+  assert.strictEqual(mermaidConfig.securityLevel, "strict");
+  assert.strictEqual(mermaidNodes.length, 1);
+  assert.strictEqual(mermaidNodes[0], mermaidElement);
   assert.strictEqual(elements[".article-layout"].dataset.toc, "absent");
   assert.strictEqual(elements["#article-toc"].hidden, true);
   vm.runInContext("setTocState(true)", context);
