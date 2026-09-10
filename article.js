@@ -242,7 +242,7 @@ if (!slug) {
     const createdAt = parsed.data.createdAt || item.createdAt || item.date;
     const updatedAt = (typeof parsed.data.updatedAt === "string" ? parsed.data.updatedAt : "") || item.updatedAt || "";
     titleElement.textContent = title;
-    document.title = `${title} — Kevin864`;
+    document.title = `${title} — 疯狂巴鲁斯`;
     publishedElement.dateTime = createdAt;
     publishedElement.textContent = createdAt;
     tags.forEach((tag) => {

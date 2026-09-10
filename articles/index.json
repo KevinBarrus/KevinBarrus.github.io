@@ -1,5 +1,16 @@
 [
   {
+    "slug": "不做一定没有利润的事情",
+    "source": "articles/不做一定没有利润的事情.md",
+    "title": "不做一定没有利润的事情",
+    "date": "2026-09-10",
+    "createdAt": "2026-09-10 22:32",
+    "updatedAt": "2026-09-10 22:32",
+    "tags": [
+      "个人成长"
+    ]
+  },
+  {
     "slug": "AgentHarness：会话管理（一）：会话隔离",
     "source": "articles/AgentHarness：会话管理（一）：会话隔离.md",
     "title": "Agent Harness：会话管理（一）：会话隔离",
