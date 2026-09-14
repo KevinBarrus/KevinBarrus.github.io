@@ -1,5 +1,23 @@
 [
   {
+    "slug": "AgentHarness：会话管理（二）：持久化与恢复",
+    "source": "articles/AgentHarness：会话管理（二）：持久化与恢复.md",
+    "title": "Agent Harness：会话管理（二）：持久化与恢复",
+    "date": "2026-09-14",
+    "createdAt": "2026-09-14 01:59",
+    "updatedAt": "2026-09-14 01:59",
+    "tags": [
+      "Agent开发",
+      "后端"
+    ],
+    "translations": {
+      "en": {
+        "title": "Agent Harness Session Management (Part 2): Persistence and Recovery",
+        "source": "articles/en/agent-harness-session-management-2-persistence-and-recovery.md"
+      }
+    }
+  },
+  {
     "slug": "不做一定没有利润的事情",
     "source": "articles/不做一定没有利润的事情.md",
     "title": "不做一定没有利润的事情",
