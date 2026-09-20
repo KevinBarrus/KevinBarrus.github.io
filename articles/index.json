@@ -1,5 +1,24 @@
 [
   {
+    "slug": "LLM前置知识：神经网络、权重、推理",
+    "source": "articles/LLM前置知识：神经网络、权重、推理.md",
+    "title": "LLM前置知识：神经网络、权重、推理",
+    "date": "2026-09-20",
+    "createdAt": "2026-09-20 00:17",
+    "updatedAt": "2026-09-20 00:17",
+    "tags": [
+      "LLM",
+      "AI Infra",
+      "深度学习"
+    ],
+    "translations": {
+      "en": {
+        "title": "LLM Prerequisites: Neural Networks, Weights, Inference",
+        "source": "articles/en/llm-prerequisites-neural-networks-weights-inference.md"
+      }
+    }
+  },
+  {
     "slug": "AgentHarness：会话管理（二）：持久化与恢复",
     "source": "articles/AgentHarness：会话管理（二）：持久化与恢复.md",
     "title": "Agent Harness：会话管理（二）：持久化与恢复",
