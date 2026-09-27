@@ -1,5 +1,22 @@
 [
   {
+    "slug": "Tokenizer：文本是怎么变成模型输入的",
+    "source": "articles/LLM 01 - tokenizer.md",
+    "title": "Tokenizer：文本是怎么变成模型输入的",
+    "date": "2026-09-27",
+    "createdAt": "2026-09-27 13:56",
+    "updatedAt": "2026-09-27 13:56",
+    "tags": [
+      "LLM"
+    ],
+    "translations": {
+      "en": {
+        "title": "Tokenizer: How Text Becomes Model Input",
+        "source": "articles/en/llm-01-tokenizer.md"
+      }
+    }
+  },
+  {
     "slug": "MiniMaxCode如何解决工具空转",
     "source": "articles/MiniMaxCode如何解决工具空转.md",
     "title": "MiniMaxCode如何解决工具空转",
