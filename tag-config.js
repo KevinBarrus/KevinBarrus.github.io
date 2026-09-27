@@ -13,6 +13,7 @@ const tagTranslations = {
   "动漫": "Anime",
   "机器学习": "Machine Learning",
   "深度学习": "Deep Learning",
+  "多模态": "Multimodal",
   "数学": "Mathematics",
   "英语": "English",
   "AI Infra": "AI Infra",
