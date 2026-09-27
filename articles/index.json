@@ -1,5 +1,22 @@
 [
   {
+    "slug": "MiniMaxCode如何解决工具空转",
+    "source": "articles/MiniMaxCode如何解决工具空转.md",
+    "title": "MiniMaxCode如何解决工具空转",
+    "date": "2026-09-27",
+    "createdAt": "2026-09-27 12:41",
+    "updatedAt": "2026-09-27 12:41",
+    "tags": [
+      "Agent开发"
+    ],
+    "translations": {
+      "en": {
+        "title": "How MiniMaxCode Solves Tool Idling",
+        "source": "articles/en/How MiniMaxCode solves tool idling.md"
+      }
+    }
+  },
+  {
     "slug": "LLM前置知识：神经网络、权重、推理",
     "source": "articles/LLM前置知识：神经网络、权重、推理.md",
     "title": "LLM前置知识：神经网络、权重、推理",
