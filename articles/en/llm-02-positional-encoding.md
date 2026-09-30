@@ -6,16 +6,16 @@ But this pipeline is still incomplete — you don't get a vector just by looking
 
 ## 1. Why Positional Encoding Is Needed
 
-Suppose "Balus" corresponds to vector A, "bit" corresponds to vector B, and "dog" corresponds to vector C. Then:
+Suppose "Barrus" corresponds to vector A, "bit" corresponds to vector B, and "dog" corresponds to vector C. Then:
 
-"the dog bit Balus" → vectors `[C, B, A]`
-"Balus bit the dog" → vectors `[A, B, C]`
+"the dog bit Barrus" → vectors `[C, B, A]`
+"Barrus bit the dog" → vectors `[A, B, C]`
 
 The two differ only in order. And a Transformer cannot perceive this difference in order.
 
 I'll keep you in suspense here — we'll get to the exact reason when we cover attention. For now, think of it this way: a token attends to the tokens before it and after it, so it isn't sensitive to order.
 
-And that's a serious problem. It's normal for a dog to bite Balus — but I, the great Balus, biting a dog? A mere swap in order completely changes the meaning.
+And that's a serious problem. It's normal for a dog to bite Barrus — but I, the great Barrus, biting a dog? A mere swap in order completely changes the meaning.
 
 So we need positional encoding to tell the LLM where each token sits.
 
@@ -33,17 +33,17 @@ Analogy: everyone used to be equally broke, with assets all in `[-1, 1]` — the
 
 ### 2.2 Problem Two
 
-Imagine a letter from Mio Akiyama to Balus. It begins:
+Imagine a letter from Mio Akiyama to Barrus. It begins:
 
 ```text
-Dear Balus:
+Dear Barrus:
   xxx (5,000 words omitted)
 ```
 
 And it ends:
 
 ```text
-Balus, I like you. Go out with me!
+Barrus, I like you. Go out with me!
                                   Mio Akiyama
                                   Month 13, Day 45, 2077
 ```
