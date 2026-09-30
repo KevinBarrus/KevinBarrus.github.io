@@ -2,10 +2,10 @@ const siteLanguage = new URLSearchParams(window.location.search).get("lang") ===
 
 const messages = {
   zh: {
-    homePageTitle: "疯狂巴鲁斯 — 开发 / 研究 / 内容创作",
-    homeDescription: "疯狂巴鲁斯的个人网站，记录技术、研究、项目与思考",
-    articlePageTitle: "文章 — 疯狂巴鲁斯",
-    tagPageTitle: "标签 — 疯狂巴鲁斯",
+    homePageTitle: "Kevin巴鲁斯 — 开发 / 研究 / 内容创作",
+    homeDescription: "Kevin巴鲁斯的个人网站，记录技术、研究、项目与思考",
+    articlePageTitle: "文章 — Kevin巴鲁斯",
+    tagPageTitle: "标签 — Kevin巴鲁斯",
     about: "关于",
     home: "首页",
     switchLanguage: "English",
@@ -44,10 +44,10 @@ const messages = {
     noTagArticles: "“{tag}” 下暂时还没有文章。",
   },
   en: {
-    homePageTitle: "疯狂巴鲁斯 — Developer / Researcher / Content Creator",
-    homeDescription: "The personal website of 疯狂巴鲁斯, featuring technology, research, projects, and reflections.",
-    articlePageTitle: "Article — 疯狂巴鲁斯",
-    tagPageTitle: "Tags — 疯狂巴鲁斯",
+    homePageTitle: "Kevin巴鲁斯 — Developer / Researcher / Content Creator",
+    homeDescription: "The personal website of Kevin巴鲁斯, featuring technology, research, projects, and reflections.",
+    articlePageTitle: "Article — Kevin巴鲁斯",
+    tagPageTitle: "Tags — Kevin巴鲁斯",
     about: "About",
     home: "Home",
     switchLanguage: "Chinese",

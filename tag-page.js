@@ -38,7 +38,7 @@ function renderTagArticles(articles) {
 
   const activeTagLabel = tagLabel(activeTag);
   tagTitle.textContent = activeTagLabel;
-  document.title = `${activeTagLabel} — 疯狂巴鲁斯`;
+  document.title = `${activeTagLabel} — Kevin巴鲁斯`;
   const visible = articles
     .filter((article) => article.tags.includes(activeTag))
     .filter((article) => siteLanguage === "zh" || article.translations?.en?.source)
