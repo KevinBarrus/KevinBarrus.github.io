@@ -150,8 +150,8 @@ $$
 
 $$
 \begin{aligned}
-PE(pos,2i) &:= \sin\left(\frac{pos}{10000^{2i/d}}\right) \\
-PE(pos,2i+1) &:= \cos\left(\frac{pos}{10000^{2i/d}}\right)
+PE(pos,2i) &= \sin\left(\frac{pos}{10000^{2i/d}}\right) \\
+PE(pos,2i+1) &= \cos\left(\frac{pos}{10000^{2i/d}}\right)
 \end{aligned}
 $$
 
