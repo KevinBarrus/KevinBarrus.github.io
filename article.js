@@ -171,19 +171,6 @@ function resolveArticleImagePaths(sourcePath) {
   });
 }
 
-function renderMath() {
-  if (typeof renderMathInElement !== "function") return;
-  renderMathInElement(contentElement, {
-    throwOnError: false,
-    delimiters: [
-      { left: "$$", right: "$$", display: true },
-      { left: "\\[", right: "\\]", display: true },
-      { left: "$", right: "$", display: false },
-      { left: "\\(", right: "\\)", display: false },
-    ],
-  });
-}
-
 async function renderMermaid() {
   if (!window.mermaid) return;
   const diagrams = Array.from(contentElement.querySelectorAll("pre > code.language-mermaid"));
@@ -256,13 +243,13 @@ if (!slug) {
       tagsElement.append(tagElement);
     });
     if (!window.marked?.parse) throw new Error(t("markdownUnavailable"));
+    if (window.marked.use && window.markedKatex) window.marked.use(window.markedKatex({ throwOnError: false }));
     contentElement.innerHTML = window.marked.parse(parsed.body, { gfm: true, breaks: false });
     resolveArticleImagePaths(sourcePath);
     removeDuplicateTitle(title);
     normalizeCodeLanguages();
     await renderMermaid();
     if (window.Prism) Prism.highlightAllUnder(contentElement);
-    renderMath();
     addHeadingIdsAndToc();
     addCodeCopyButtons();
     if (updatedAt && updatedAt !== createdAt) {
