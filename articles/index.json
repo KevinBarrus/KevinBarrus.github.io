@@ -1,5 +1,22 @@
 [
   {
+    "slug": "LLM 02 - 位置编码",
+    "source": "articles/LLM 02 - 位置编码.md",
+    "title": "LLM 02 - 位置编码",
+    "date": "2026-09-30",
+    "createdAt": "2026-09-30 10:34",
+    "updatedAt": "2026-09-30 10:34",
+    "tags": [
+      "LLM"
+    ],
+    "translations": {
+      "en": {
+        "title": "LLM 02: Positional Encoding",
+        "source": "articles/en/llm-02-positional-encoding.md"
+      }
+    }
+  },
+  {
     "slug": "Tokenizer：文本是怎么变成模型输入的",
     "source": "articles/LLM 01 - tokenizer.md",
     "title": "Tokenizer：文本是怎么变成模型输入的",
