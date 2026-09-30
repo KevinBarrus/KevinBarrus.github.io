@@ -164,7 +164,7 @@ i=0:\quad 10000^{2\times0/4}=1
 $$
 
 $$
-i=1:\quad 10000^{2\times1/4} := 10000^{1/2} := 100
+i=1:\quad 10000^{2\times1/4} = 10000^{1/2} = 100
 $$
 
 Therefore:
@@ -207,7 +207,7 @@ $$
 First, the first pair:
 
 $$
-P_0(pos+k) :=
+P_0(pos+k) =
 \begin{bmatrix}
 \sin(pos+k)\\
 \cos(pos+k)
@@ -218,15 +218,15 @@ By the angle-sum formulas:
 
 $$
 \begin{aligned}
-\sin(pos+k) &:= \sin(pos)\cos(k) + \cos(pos)\sin(k) \\
-\cos(pos+k) &:= \cos(pos)\cos(k) - \sin(pos)\sin(k)
+\sin(pos+k) &= \sin(pos)\cos(k) + \cos(pos)\sin(k) \\
+\cos(pos+k) &= \cos(pos)\cos(k) - \sin(pos)\sin(k)
 \end{aligned}
 $$
 
 Therefore:
 
 $$
-P_0(pos+k) :=
+P_0(pos+k) =
 \begin{bmatrix}
 \cos(k) & \sin(k)\\
 -\sin(k) & \cos(k)
@@ -256,7 +256,7 @@ $$
 The second pair works the same way:
 
 $$
-P_1(pos+k) :=
+P_1(pos+k) =
 \begin{bmatrix}
 \sin((pos+k)/100)\\
 \cos((pos+k)/100)
@@ -266,13 +266,13 @@ $$
 Note:
 
 $$
-\frac{pos+k}{100} := \frac{pos}{100} + \frac{k}{100}
+\frac{pos+k}{100} = \frac{pos}{100} + \frac{k}{100}
 $$
 
 So:
 
 $$
-P_1(pos+k) :=
+P_1(pos+k) =
 \begin{bmatrix}
 \cos(k/100) & \sin(k/100)\\
 -\sin(k/100) & \cos(k/100)
@@ -302,7 +302,7 @@ $$
 So the complete four-dimensional positional encoding:
 
 $$
-P(pos+k) :=
+P(pos+k) =
 \begin{bmatrix}
 M_0(k) & 0\\
 0 & M_1(k)
