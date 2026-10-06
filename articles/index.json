@@ -1,5 +1,23 @@
 [
   {
+    "slug": "AgentHarness：上下文管理（一）：我的harness",
+    "source": "articles/AgentHarness：上下文管理（一）：我的harness.md",
+    "title": "Agent Harness：上下文管理（一）：我的harness",
+    "date": "2026-10-06",
+    "createdAt": "2026-10-06 20:00",
+    "updatedAt": "2026-10-06 20:00",
+    "tags": [
+      "Agent开发",
+      "后端"
+    ],
+    "translations": {
+      "en": {
+        "title": "Agent Harness Context Management (Part 1): My Harness",
+        "source": "articles/en/agent-harness-context-management-1-my-harness.md"
+      }
+    }
+  },
+  {
     "slug": "LLM 02 - 位置编码",
     "source": "articles/LLM 02 - 位置编码.md",
     "title": "LLM 02 - 位置编码",
