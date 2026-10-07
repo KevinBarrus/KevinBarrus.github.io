@@ -568,6 +568,62 @@ text
 
 So the tokenizer sits between human text and the neural network. It converts arbitrary text into a sequence of discrete indices, then turns the generated indices back into human-readable text.
 
+## 16. Hands-On
+
+Use a real tokenizer to get a feel for how text actually becomes a sequence of token IDs.
+
+```python
+import tiktoken
+
+tokenizer = tiktoken.get_encoding("gpt2")
+
+text = "I love large language model"
+ids = tokenizer.encode(text)
+tokens = [tokenizer.decode([i]) for i in ids]
+
+print(f"Text: {text}")
+print(f"token IDs: {ids}")
+print(f"tokens: {tokens}")
+
+print(f"\nGPT-2 vocabulary size: {tokenizer.n_vocab}")
+print("First 20 vocabulary entries (ID → Token):")
+
+for token_id in range(20):
+    token = tokenizer.decode([token_id])
+    print(f"    ID {token_id:>2} → {token!r}")
+```
+
+`encode` is exactly what we covered in the explanation part — converting text into a sequence of token IDs — while `decode` converts a sequence of token IDs back into the corresponding text.
+
+The output:
+
+```python
+tokens: ['I', ' love', ' large', ' language', ' model']
+
+GPT-2 vocabulary size: 50257
+First 20 vocabulary entries (ID → Token):
+    ID  0 → '!'
+    ID  1 → '"'
+    ID  2 → '#'
+    ID  3 → '$'
+    ID  4 → '%'
+    ID  5 → '&'
+    ID  6 → "'"
+    ID  7 → '('
+    ID  8 → ')'
+    ID  9 → '*'
+    ID 10 → '+'
+    ID 11 → ','
+    ID 12 → '-'
+    ID 13 → '.'
+    ID 14 → '/'
+    ID 15 → '0'
+    ID 16 → '1'
+    ID 17 → '2'
+    ID 18 → '3'
+    ID 19 → '4'
+```
+
 ## Summary
 
 The tokenizer's most core job is just three steps:

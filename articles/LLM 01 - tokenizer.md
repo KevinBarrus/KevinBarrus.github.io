@@ -569,6 +569,62 @@ UTF-8 解码
 
 所以 Tokenizer 位于人类文本和神经网络之间。它负责把任意文本转换成一串离散编号，再把生成出来的编号还原成人类可读的文本。
 
+## 16. 实操
+
+用真实的 Tokenizer 感受一下文本是如何变成 Token ID 序列的。
+
+```python
+import tiktoken
+
+tokenizer = tiktoken.get_encoding("gpt2")
+
+text = "I love large language model"
+ids = tokenizer.encode(text)
+tokens = [tokenizer.decode([i]) for i in ids]
+
+print(f"原文：{text}")
+print(f"token ID: {ids}")
+print(f"token: {tokens}")
+
+print(f"\nGPT-2 的词表大小: {tokenizer.n_vocab}")
+print("词表前 20 项（ID → Token）：")
+
+for token_id in range(20):
+    token = tokenizer.decode([token_id])
+    print(f"    ID {token_id:>2} → {token!r}")
+```
+
+`encode` 就是我们在讲解部分说的，把文本转换为 token ID 序列，`decode` 则是根据 token ID 序列转换为对应的文本。
+
+输出结果：
+
+```python
+token: ['I', ' love', ' large', ' language', ' model']
+
+GPT-2 的词表大小: 50257
+词表前 20 项（ID → Token）：
+    ID  0 → '!'
+    ID  1 → '"'
+    ID  2 → '#'
+    ID  3 → '$'
+    ID  4 → '%'
+    ID  5 → '&'
+    ID  6 → "'"
+    ID  7 → '('
+    ID  8 → ')'
+    ID  9 → '*'
+    ID 10 → '+'
+    ID 11 → ','
+    ID 12 → '-'
+    ID 13 → '.'
+    ID 14 → '/'
+    ID 15 → '0'
+    ID 16 → '1'
+    ID 17 → '2'
+    ID 18 → '3'
+    ID 19 → '4'
+```
+
 ## 总结
 
 Tokenizer 最核心的事情只有三步：
